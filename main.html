@@ -1,16 +1,55 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .image-container {
+            margin-bottom: 20px;
+            min-height: 200px; /* Placeholder height for lazy loading */
+            background-color: #f0f0f0;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <div class="container">
+        <h2>Lazy Loading Images</h2>
+        <p>Scroll down to see images load as they appear in the viewport.</p>
 
+        <div class="image-container">
+            <img class="lazy" data-src="https://via.placeholder.com/800x400?text=Image+1" alt="Lazy Image 1">
+        </div>
+        <div class="image-container">
+            <img class="lazy" data-src="https://via.placeholder.com/800x400?text=Image+2" alt="Lazy Image 2">
+        </div>
+        <div class="image-container">
+            <img class="lazy" data-src="https://via.placeholder.com/800x400?text=Image+3" alt="Lazy Image 3">
+        </div>
+        <div class="image-container">
+            <img class="lazy" data-src="https://via.placeholder.com/800x400?text=Image+4" alt="Lazy Image 4">
+        </div>
+        <div class="image-container">
+            <img class="lazy" data-src="https://via.placeholder.com/800x400?text=Image+5" alt="Lazy Image 5">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
+
